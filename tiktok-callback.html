@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Authorizing…</title>
+</head>
+<body style="background:#0A0A0A;color:#F5F5F5;font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;">
+<p>Redirecting to the local publish script…</p>
+<script>
+  // Static bounce page: TikTok requires an HTTPS redirect URI, but the actual OAuth code
+  // needs to reach the local script's listener. Localhost is exempt from mixed-content
+  // blocking, so a plain navigation here works without a backend.
+  window.location.replace("http://localhost:8768/callback" + window.location.search);
+</script>
+</body>
+</html>
