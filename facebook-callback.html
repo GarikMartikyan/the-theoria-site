@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Authorizing…</title>
+</head>
+<body style="background:#0A0A0A;color:#F5F5F5;font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;">
+<p>Redirecting to the local publish script…</p>
+<script>
+  // Static bounce page: Meta's redirect-URI checker for Facebook Login for Business appears
+  // to require a live-reachable HTTPS URL (localhost fails that check even though it works
+  // fine as an actual OAuth redirect target). Localhost is exempt from mixed-content
+  // blocking, so this plain navigation works without a backend.
+  window.location.replace("http://localhost:8769/oauth2callback" + window.location.search);
+</script>
+</body>
+</html>
